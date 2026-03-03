@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,36 +12,81 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <span class="nav-logo">BEK.</span>
   <ul class="nav-links">
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#about">&Agrave; propos</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services"  data-fr="Services"   data-en="Services">Services</a></li>
+    <li><a href="#projects"  data-fr="Projets"    data-en="Projects">Projets</a></li>
+    <li><a href="#skills"    data-fr="Skills"     data-en="Skills">Skills</a></li>
+    <li><a href="#about"     data-fr="&Agrave; propos" data-en="About">&Agrave; propos</a></li>
+    <li><a href="#contact"   data-fr="Contact"    data-en="Contact">Contact</a></li>
   </ul>
+  <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-badge"><span class="dot"></span> Disponible pour missions &amp; collaborations</div>
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span data-fr="Disponible pour missions &amp; collaborations" data-en="Available for missions &amp; collaborations">Disponible pour missions &amp; collaborations</span>
+    </div>
     <h1>
       <span class="name">Badreddine EL KHAMLICHI</span>
       <span class="role">Data Scientist &middot; Engineer &middot; Builder</span>
     </h1>
-    <p class="hero-desc">Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es, je construis des outils data, des automatisations et des applications sur mesure. En mission chez <strong>Boehringer Ingelheim</strong> (Lyon) via <strong>Efor</strong>.</p>
+    <p class="hero-desc" data-fr="Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es, je construis des outils data, des automatisations et des applications sur mesure. En mission chez &lt;strong&gt;Boehringer Ingelheim&lt;/strong&gt; (Lyon) via &lt;strong&gt;Efor&lt;/strong&gt;." data-en="Applied mathematics engineer building data tools, automations and custom applications. Currently on assignment at &lt;strong&gt;Boehringer Ingelheim&lt;/strong&gt; (Lyon) via &lt;strong&gt;Efor&lt;/strong&gt;.">
+      Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es, je construis des outils data, des automatisations et des applications sur mesure. En mission chez <strong>Boehringer Ingelheim</strong> (Lyon) via <strong>Efor</strong>.
+    </p>
     <div class="hero-btns">
-      <a href="#projects" class="btn btn-primary">&#128640; Voir mes projets</a>
-      <a href="#contact" class="btn btn-ghost">&#128140; Me contacter</a>
+      <a href="#projects" class="btn btn-primary">
+        <span data-fr="&#128640; Voir mes projets" data-en="&#128640; See my projects">&#128640; Voir mes projets</span>
+      </a>
+      <a href="cv_placeholder.pdf" target="_blank" class="btn btn-ghost" id="cvBtn">
+        <span data-fr="&#128196; T&eacute;l&eacute;charger CV" data-en="&#128196; Download CV">&#128196; T&eacute;l&eacute;charger CV</span>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">// services</p>
+    <h2 class="section-title" data-fr="Ce que j&rsquo;apporte" data-en="What I bring">Ce que j&rsquo;apporte</h2>
+    <p class="section-sub" data-fr="Data science, engineering et d&eacute;veloppement d&rsquo;outils sur mesure." data-en="Data science, engineering and custom tool development.">Data science, engineering et d&eacute;veloppement d&rsquo;outils sur mesure.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">&#128202;</span>
+        <h3 data-fr="Dashboards &amp; Data Viz" data-en="Dashboards &amp; Data Viz">Dashboards &amp; Data Viz</h3>
+        <p data-fr="Applications Streamlit sur mesure, visualisations Plotly interactives, reporting avanc&eacute; pour contextes m&eacute;tier." data-en="Custom Streamlit applications, interactive Plotly charts, advanced business reporting.">Applications Streamlit sur mesure, visualisations Plotly interactives, reporting avanc&eacute; pour contextes m&eacute;tier.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#9881;&#65039;</span>
+        <h3 data-fr="Automatisation &amp; Data Engineering" data-en="Automation &amp; Data Engineering">Automatisation &amp; Data Engineering</h3>
+        <p data-fr="Pipelines de donn&eacute;es, int&eacute;gration Snowflake, automatisation de processus m&eacute;tier via Python et SQL." data-en="Data pipelines, Snowflake integration, business process automation with Python and SQL.">Pipelines de donn&eacute;es, int&eacute;gration Snowflake, automatisation de processus m&eacute;tier via Python et SQL.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#129504;</span>
+        <h3 data-fr="Machine Learning &amp; IA" data-en="Machine Learning &amp; AI">Machine Learning &amp; IA</h3>
+        <p data-fr="Mod&egrave;les pr&eacute;dictifs (RF, XGBoost, LSTM), LLM/RAG, validation rigoureuse walk-forward, d&eacute;ploiement en production." data-en="Predictive models (RF, XGBoost, LSTM), LLM/RAG, rigorous walk-forward validation, production deployment.">Mod&egrave;les pr&eacute;dictifs (RF, XGBoost, LSTM), LLM/RAG, validation rigoureuse walk-forward, d&eacute;ploiement en production.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">&#127760;</span>
+        <h3 data-fr="Apps Web &amp; Micro-SaaS" data-en="Web Apps &amp; Micro-SaaS">Apps Web &amp; Micro-SaaS</h3>
+        <p data-fr="D&eacute;veloppement full-stack, d&eacute;ploiement Vercel/GitHub Pages, architecture MVP rapide pour valider une id&eacute;e." data-en="Full-stack development, Vercel/GitHub Pages deployment, fast MVP architecture to validate an idea.">D&eacute;veloppement full-stack, d&eacute;ploiement Vercel/GitHub Pages, architecture MVP rapide pour valider une id&eacute;e.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <p class="section-label">// projets</p>
-    <h2 class="section-title">Ce que je construis</h2>
-    <p class="section-sub">Des outils data, des apps web d&eacute;ploy&eacute;es, des mod&egrave;les ML &mdash; projets perso &amp; pro.</p>
+    <h2 class="section-title" data-fr="Ce que je construis" data-en="What I build">Ce que je construis</h2>
+    <p class="section-sub" data-fr="Des outils data, des apps web d&eacute;ploy&eacute;es, des mod&egrave;les ML &mdash; projets perso &amp; pro." data-en="Data tools, deployed web apps, ML models &mdash; personal &amp; professional projects.">Des outils data, des apps web d&eacute;ploy&eacute;es, des mod&egrave;les ML &mdash; projets perso &amp; pro.</p>
     <div class="projects-grid">
 
       <div class="card">
@@ -51,9 +96,9 @@
             <span class="card-badge gold">&#9889; Actif</span>
           </div>
           <h3>GoldSignal</h3>
-          <p>Application Streamlit d&rsquo;analyse pour m&eacute;taux pr&eacute;cieux : cours spot temps r&eacute;el, calculateur prime/spread, 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking), backtesting P&amp;L et simulateur Monte-Carlo.</p>
+          <p data-fr="App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable." data-en="Multi-page Streamlit app for physical precious metals. 6 ML models (RF, XGBoost, LSTM, Stacking) trained with strict walk-forward &mdash; zero data leakage. 40+ engineered features, P&amp;L backtesting (Sharpe, alpha vs B&amp;H), Monte-Carlo simulator, installable PWA.">App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable.</p>
           <div class="card-tags">
-            <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">yfinance</span>
+            <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">PyTorch</span><span class="tag">yfinance</span><span class="tag">PWA</span>
           </div>
         </div>
         <div class="card-links">
@@ -69,7 +114,7 @@
             <span class="card-badge">En cours</span>
           </div>
           <h3>MManager</h3>
-          <p>Plateforme de gestion de mosqu&eacute;e : suivi budg&eacute;taire, donations, comptabilit&eacute; et tableau de bord communautaire. Micro-SaaS pour associations musulmanes.</p>
+          <p data-fr="Micro-SaaS de gestion de mosqu&eacute;e : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes." data-en="Mosque management micro-SaaS: budget tracking, donation system, general accounting and community dashboard. Designed for Muslim associations.">Micro-SaaS de gestion de mosqu&eacute;e : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes.</p>
           <div class="card-tags">
             <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">SaaS</span>
           </div>
@@ -86,7 +131,7 @@
             <span class="card-badge green">D&eacute;ploy&eacute;</span>
           </div>
           <h3>Garage Booking</h3>
-          <p>Application web de r&eacute;servation de cr&eacute;neaux en garage automobile, d&eacute;ploy&eacute;e en production sur Vercel.</p>
+          <p data-fr="Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel." data-en="Web app for booking garage appointment slots. Client interface + back-office, availability management, deployed in production on Vercel.">Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel.</p>
           <div class="card-tags">
             <span class="tag">JavaScript</span><span class="tag">Vercel</span><span class="tag">Web App</span>
           </div>
@@ -104,7 +149,7 @@
             <span class="card-badge green">D&eacute;ploy&eacute;</span>
           </div>
           <h3>Chatbot Portfolio</h3>
-          <p>Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio, capable de r&eacute;pondre aux questions sur le profil et les projets. Stack TypeScript + LLM d&eacute;ploy&eacute; sur Vercel.</p>
+          <p data-fr="Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel." data-en="AI chatbot integrated into a Next.js portfolio. Answers questions about the profile and projects via an LLM. TypeScript + LLM API stack, deployed on Vercel.">Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel.</p>
           <div class="card-tags">
             <span class="tag">TypeScript</span><span class="tag">LLM</span><span class="tag">Next.js</span><span class="tag">Vercel</span>
           </div>
@@ -122,7 +167,7 @@
             <span class="card-badge">ML</span>
           </div>
           <h3>Precipitation Prediction</h3>
-          <p>Mod&egrave;le de pr&eacute;diction de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques &mdash; feature engineering, classification et &eacute;valuation de mod&egrave;les ML avec Jupyter.</p>
+          <p data-fr="Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation." data-en="ML classification of precipitation from historical weather data. Full feature engineering, classifier comparison (RF, SVM, KNN), cross-validation evaluation.">Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation.</p>
           <div class="card-tags">
             <span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">scikit-learn</span><span class="tag">ML</span>
           </div>
@@ -139,7 +184,7 @@
             <span class="card-badge">Deep Learning</span>
           </div>
           <h3>PokedexCNN</h3>
-          <p>Pok&eacute;dex intelligent bas&eacute; sur un CNN pour classifier les Pok&eacute;mon par image. Impl&eacute;ment&eacute; avec PyTorch sur Jupyter Notebook.</p>
+          <p data-fr="Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out." data-en="Smart Pok&eacute;dex based on a CNN trained with PyTorch to classify Pok&eacute;mon by image. Transfer learning, data augmentation, evaluation on hold-out test set.">Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out.</p>
           <div class="card-tags">
             <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">PyTorch</span><span class="tag">Computer Vision</span>
           </div>
@@ -156,7 +201,7 @@
             <span class="card-badge">Data Viz</span>
           </div>
           <h3>Dashboards</h3>
-          <p>Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier.</p>
+          <p data-fr="Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly." data-en="Collection of custom data viz dashboards &mdash; visual exploration and advanced reporting for various business contexts with Streamlit and Plotly.">Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly.</p>
           <div class="card-tags">
             <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Data Viz</span>
           </div>
@@ -173,7 +218,7 @@
             <span class="card-badge">Acad&eacute;mique</span>
           </div>
           <h3>S&eacute;ries Temporelles UKgas</h3>
-          <p>Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests ADF, ARIMA, pr&eacute;visions. Projet Polytech Lyon (M1 Maths Appliqu&eacute;es).</p>
+          <p data-fr="Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance. Projet M1 Polytech Lyon." data-en="Analysis and modelling of the UKgas time series &mdash; stationarity tests (ADF, KPSS), ARIMA/SARIMA identification, forecasts and confidence intervals. M1 Polytech Lyon project.">Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance. Projet M1 Polytech Lyon.</p>
           <div class="card-tags">
             <span class="tag">R</span><span class="tag">ARIMA</span><span class="tag">Time Series</span><span class="tag">Stats</span>
           </div>
@@ -187,11 +232,12 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <p class="section-label">// stack technique</p>
-    <h2 class="section-title">Technologies &amp; Outils</h2>
-    <p class="section-sub">Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer.</p>
+    <h2 class="section-title" data-fr="Technologies &amp; Outils" data-en="Technologies &amp; Tools">Technologies &amp; Outils</h2>
+    <p class="section-sub" data-fr="Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer." data-en="Technologies I use daily to design, analyse and deploy.">Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer.</p>
     <div class="skills-grid">
       <div class="skill-chip"><span class="icon">&#128013;</span>Python</div>
       <div class="skill-chip"><span class="icon">&#127880;</span>Streamlit</div>
@@ -212,35 +258,69 @@
   </div>
 </section>
 
+<!-- ABOUT + TIMELINE -->
 <section id="about">
   <div class="container">
+    <p class="section-label">// &agrave; propos</p>
+    <h2 class="section-title" data-fr="Parcours &amp; Profil" data-en="Background &amp; Profile">Parcours &amp; Profil</h2>
     <div class="about-grid">
-      <div class="about-text">
-        <p class="section-label">// &agrave; propos</p>
-        <h2>Ing&eacute;nieur, Data Scientist &amp; Builder</h2>
-        <p>Dipl&ocirc;m&eacute; en math&eacute;matiques appliqu&eacute;es de <strong>Polytech Lyon</strong> (2024), avec un double master Maths en Action (UCBL1) et un master MAE (IAE Lyon).</p>
-        <p>Actuellement Data Scientist chez <strong>Efor</strong>, en mission client chez <strong>Boehringer Ingelheim</strong> &agrave; Lyon &mdash; automatisations, data engineering et outils data viz sur mesure avec Streamlit.</p>
-        <p>Passionn&eacute; de running (marathon 3h43 &#127939;), de finance halal, et de construction de micro-SaaS pour r&eacute;soudre des probl&egrave;mes concrets.</p>
+
+      <div class="about-left">
+        <p data-fr="Dipl&ocirc;m&eacute; en math&eacute;matiques appliqu&eacute;es de &lt;strong&gt;Polytech Lyon&lt;/strong&gt; (2024), avec un double master Maths en Action (UCBL1) et un master MAE (IAE Lyon)." data-en="Graduate in applied mathematics from &lt;strong&gt;Polytech Lyon&lt;/strong&gt; (2024), with a double master in Maths en Action (UCBL1) and an MAE master (IAE Lyon).">
+          Dipl&ocirc;m&eacute; en math&eacute;matiques appliqu&eacute;es de <strong>Polytech Lyon</strong> (2024), avec un double master Maths en Action (UCBL1) et un master MAE (IAE Lyon).
+        </p>
+        <p style="margin-top:0.9rem" data-fr="Passionn&eacute; de running (marathon 3h43 &#127939;), de finance halal et de construction de micro-SaaS pour r&eacute;soudre des probl&egrave;mes concrets." data-en="Passionate about running (3h43 marathon &#127939;), halal finance and building micro-SaaS to solve real problems.">
+          Passionn&eacute; de running (marathon 3h43 &#127939;), de finance halal et de construction de micro-SaaS pour r&eacute;soudre des probl&egrave;mes concrets.
+        </p>
         <div class="about-btns">
           <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="btn btn-ghost">GitHub &#8599;</a>
           <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn &#8599;</a>
         </div>
+        <div class="about-stats">
+          <div class="stat-box"><div class="num">13+</div><div class="label" data-fr="Projets GitHub" data-en="GitHub Projects">Projets GitHub</div></div>
+          <div class="stat-box"><div class="num">3h43</div><div class="label" data-fr="Marathon perso" data-en="Personal marathon">Marathon perso</div></div>
+          <div class="stat-box"><div class="num">2024</div><div class="label" data-fr="Dipl&ocirc;me Polytech" data-en="Polytech degree">Dipl&ocirc;me Polytech</div></div>
+          <div class="stat-box"><div class="num">5+</div><div class="label" data-fr="Apps d&eacute;ploy&eacute;es" data-en="Deployed apps">Apps d&eacute;ploy&eacute;es</div></div>
+        </div>
       </div>
-      <div class="about-stats">
-        <div class="stat-box"><div class="num">13+</div><div class="label">Projets GitHub</div></div>
-        <div class="stat-box"><div class="num">3h43</div><div class="label">Marathon perso</div></div>
-        <div class="stat-box"><div class="num">2024</div><div class="label">Dipl&ocirc;me Polytech</div></div>
-        <div class="stat-box"><div class="num">5+</div><div class="label">Apps d&eacute;ploy&eacute;es</div></div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-content">
+            <span class="tl-date">Avr. 2025 &mdash; Pr&eacute;sent</span>
+            <h4>Data Scientist &mdash; Efor</h4>
+            <p data-fr="Mission client chez &lt;strong&gt;Boehringer Ingelheim&lt;/strong&gt; (Lyon LPA). Automatisations, data engineering, outils data viz Streamlit sur mesure." data-en="Client assignment at &lt;strong&gt;Boehringer Ingelheim&lt;/strong&gt; (Lyon LPA). Automation, data engineering, custom Streamlit data viz tools.">Mission client chez <strong>Boehringer Ingelheim</strong> (Lyon LPA). Automatisations, data engineering, outils data viz Streamlit sur mesure.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-date">2024</span>
+            <h4 data-fr="Dipl&ocirc;me Ing&eacute;nieur &mdash; Polytech Lyon" data-en="Engineering Degree &mdash; Polytech Lyon">Dipl&ocirc;me Ing&eacute;nieur &mdash; Polytech Lyon</h4>
+            <p data-fr="Sp&eacute;cialisation Math&eacute;matiques Appliqu&eacute;es &amp; Mod&eacute;lisation. Double master : Maths en Action (UCBL1) + MAE (IAE Lyon)." data-en="Specialisation in Applied Mathematics &amp; Modelling. Double master: Maths en Action (UCBL1) + MAE (IAE Lyon).">Sp&eacute;cialisation Math&eacute;matiques Appliqu&eacute;es &amp; Mod&eacute;lisation. Double master : Maths en Action (UCBL1) + MAE (IAE Lyon).</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-date">2019 &mdash; 2024</span>
+            <h4 data-fr="&Eacute;tudiant ing&eacute;nieur &mdash; Polytech Lyon" data-en="Engineering student &mdash; Polytech Lyon">&Eacute;tudiant ing&eacute;nieur &mdash; Polytech Lyon</h4>
+            <p data-fr="Formation en math&eacute;matiques appliqu&eacute;es, statistiques, machine learning et programmation scientifique (Python, R, C++)." data-en="Training in applied mathematics, statistics, machine learning and scientific programming (Python, R, C++).">Formation en math&eacute;matiques appliqu&eacute;es, statistiques, machine learning et programmation scientifique (Python, R, C++).</p>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="contact-card">
-      <h2>Travaillons ensemble &#129309;</h2>
-      <p>Toujours ouvert &agrave; des collaborations, missions freelance ou &eacute;changes autour de la data et du code.</p>
+      <h2 data-fr="Travaillons ensemble &#129309;" data-en="Let's work together &#129309;">Travaillons ensemble &#129309;</h2>
+      <p data-fr="Toujours ouvert &agrave; des collaborations, missions freelance ou &eacute;changes autour de la data et du code." data-en="Always open to collaborations, freelance missions or discussions around data and code.">Toujours ouvert &agrave; des collaborations, missions freelance ou &eacute;changes autour de la data et du code.</p>
       <div class="social-links">
         <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="social-link">&#128025; GitHub</a>
         <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="social-link">&#128188; LinkedIn</a>
@@ -251,7 +331,7 @@
 </section>
 
 <footer>
-  &copy; 2026 Badreddine EL KHAMLICHI &mdash; Construit avec &hearts; et beaucoup de Python
+  &copy; 2026 Badreddine EL KHAMLICHI &mdash; <span data-fr="Construit avec &hearts; et beaucoup de Python" data-en="Built with &hearts; and a lot of Python">Construit avec &hearts; et beaucoup de Python</span>
 </footer>
 
 <script src="script.js"></script>
