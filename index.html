@@ -18,8 +18,9 @@
   <ul class="nav-links">
     <li><a href="#approach" data-fr="Approche"    data-en="Approach">Approche</a></li>
     <li><a href="#projects" data-fr="Projets"     data-en="Projects">Projets</a></li>
-    <li><a href="#skills"   data-fr="Skills"      data-en="Skills">Skills</a></li>
+    <li><a href="#labs"     data-fr="Explorations" data-en="Explorations">Explorations</a></li>
     <li><a href="#about"    data-fr="&Agrave; propos" data-en="About">&Agrave; propos</a></li>
+    <li><a href="#skills"   data-fr="Stack"       data-en="Stack">Stack</a></li>
     <li><a href="#contact"  data-fr="Contact"     data-en="Contact">Contact</a></li>
   </ul>
   <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
@@ -57,10 +58,7 @@
   <div class="container">
     <p class="section-label">// approche</p>
     <h2 class="section-title" data-fr="Comment je travaille" data-en="How I work">Comment je travaille</h2>
-
     <div class="approach-layout">
-
-      <!-- Texte principal -->
       <div class="approach-text">
         <p class="approach-lead"
            data-fr="Je ne pars pas d&rsquo;une techno. Je pars d&rsquo;un probl&egrave;me."
@@ -76,8 +74,6 @@
           Dans mon p&eacute;rim&egrave;tre &mdash; data, automatisation, outils sur mesure &mdash; l&rsquo;objectif est toujours le m&ecirc;me : r&eacute;duire la friction, lib&eacute;rer du temps, aider une &eacute;quipe ou une entreprise &agrave; passer &agrave; l&rsquo;&eacute;chelle sur ce qui compte vraiment.
         </p>
       </div>
-
-      <!-- 2 cards différenciateurs -->
       <div class="approach-cards">
         <div class="approach-card">
           <span class="approach-card-icon">&#128208;</span>
@@ -96,17 +92,20 @@
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJETS -->
 <section id="projects">
   <div class="container">
     <p class="section-label">// projets</p>
-    <h2 class="section-title" data-fr="Ce que je construis" data-en="What I build">Ce que je construis</h2>
-    <p class="section-sub" data-fr="Des outils data, des apps web d&eacute;ploy&eacute;es, des mod&egrave;les ML &mdash; projets perso &amp; pro." data-en="Data tools, deployed web apps, ML models &mdash; personal &amp; professional projects.">Des outils data, des apps web d&eacute;ploy&eacute;es, des mod&egrave;les ML &mdash; projets perso &amp; pro.</p>
+    <h2 class="section-title" data-fr="&#128640; Projets" data-en="&#128640; Projects">&#128640; Projets</h2>
+    <p class="section-sub"
+       data-fr="Applications d&eacute;ploy&eacute;es, outils data et produits construits pour r&eacute;soudre de vrais probl&egrave;mes."
+       data-en="Deployed applications, data tools and products built to solve real problems.">
+      Applications d&eacute;ploy&eacute;es, outils data et produits construits pour r&eacute;soudre de vrais probl&egrave;mes.
+    </p>
     <div class="projects-grid">
 
       <div class="card">
@@ -116,7 +115,10 @@
             <span class="card-badge gold">&#9889; Actif</span>
           </div>
           <h3>GoldSignal</h3>
-          <p data-fr="App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable." data-en="Multi-page Streamlit app for physical precious metals. 6 ML models (RF, XGBoost, LSTM, Stacking) trained with strict walk-forward &mdash; zero data leakage. 40+ engineered features, P&amp;L backtesting (Sharpe, alpha vs B&amp;H), Monte-Carlo simulator, installable PWA.">App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable.</p>
+          <p data-fr="App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable."
+             data-en="Multi-page Streamlit app for physical precious metals. 6 ML models (RF, XGBoost, LSTM, Stacking) with strict walk-forward &mdash; zero data leakage. 40+ engineered features, P&amp;L backtesting (Sharpe, alpha vs B&amp;H), Monte-Carlo simulator, installable PWA.">
+            App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) entra&icirc;n&eacute;s en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable.
+          </p>
           <div class="card-tags">
             <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">PyTorch</span><span class="tag">yfinance</span><span class="tag">PWA</span>
           </div>
@@ -134,7 +136,10 @@
             <span class="card-badge">En cours</span>
           </div>
           <h3>MManager</h3>
-          <p data-fr="Micro-SaaS de gestion de mosqu&eacute;e : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes." data-en="Mosque management micro-SaaS: budget tracking, donation system, general accounting and community dashboard. Designed for Muslim associations.">Micro-SaaS de gestion de mosqu&eacute;e : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes.</p>
+          <p data-fr="Micro-SaaS de gestion d&rsquo;association : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes."
+             data-en="Association management micro-SaaS: budget tracking, donation system, general accounting and community dashboard. Designed for Muslim associations.">
+            Micro-SaaS de gestion d&rsquo;association : suivi budg&eacute;taire, syst&egrave;me de donations, comptabilit&eacute; g&eacute;n&eacute;rale et tableau de bord communautaire. Con&ccedil;u pour les associations musulmanes.
+          </p>
           <div class="card-tags">
             <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">SaaS</span>
           </div>
@@ -151,7 +156,10 @@
             <span class="card-badge green">D&eacute;ploy&eacute;</span>
           </div>
           <h3>Garage Booking</h3>
-          <p data-fr="Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel." data-en="Web app for booking garage appointment slots. Client interface + back-office, availability management, deployed in production on Vercel.">Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel.</p>
+          <p data-fr="Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel."
+             data-en="Web app for booking garage appointment slots. Client interface + back-office, availability management, deployed in production on Vercel.">
+            Application web de r&eacute;servation de cr&eacute;neaux en garage automobile. Interface client + back-office, gestion des disponibilit&eacute;s, d&eacute;ploy&eacute;e en production sur Vercel.
+          </p>
           <div class="card-tags">
             <span class="tag">JavaScript</span><span class="tag">Vercel</span><span class="tag">Web App</span>
           </div>
@@ -169,7 +177,10 @@
             <span class="card-badge green">D&eacute;ploy&eacute;</span>
           </div>
           <h3>Chatbot Portfolio</h3>
-          <p data-fr="Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel." data-en="AI chatbot integrated into a Next.js portfolio. Answers questions about the profile and projects via an LLM. TypeScript + LLM API stack, deployed on Vercel.">Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel.</p>
+          <p data-fr="Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel."
+             data-en="AI chatbot integrated into a Next.js portfolio. Answers questions about the profile and projects via an LLM. TypeScript + LLM API stack, deployed on Vercel.">
+            Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel.
+          </p>
           <div class="card-tags">
             <span class="tag">TypeScript</span><span class="tag">LLM</span><span class="tag">Next.js</span><span class="tag">Vercel</span>
           </div>
@@ -183,11 +194,50 @@
       <div class="card">
         <div class="card-body">
           <div class="card-header">
+            <span class="card-icon">&#128202;</span>
+            <span class="card-badge">Data Viz</span>
+          </div>
+          <h3>Dashboards</h3>
+          <p data-fr="Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly."
+             data-en="Collection of custom data viz dashboards &mdash; visual exploration and advanced reporting for various business contexts with Streamlit and Plotly.">
+            Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Data Viz</span>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/BadreddineEK/Dashboards" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORATIONS / TRAVAUX -->
+<section id="labs">
+  <div class="container">
+    <p class="section-label">// travaux &amp; explorations</p>
+    <h2 class="section-title" data-fr="&#128300; Travaux &amp; Explorations" data-en="&#128300; Research &amp; Explorations">&#128300; Travaux &amp; Explorations</h2>
+    <p class="section-sub"
+       data-fr="Projets acad&eacute;miques et explorations techniques &mdash; rigueur ML, mod&eacute;lisation statistique, deep learning."
+       data-en="Academic projects and technical explorations &mdash; ML rigour, statistical modelling, deep learning.">
+      Projets acad&eacute;miques et explorations techniques &mdash; rigueur ML, mod&eacute;lisation statistique, deep learning.
+    </p>
+    <div class="projects-grid">
+
+      <div class="card">
+        <div class="card-body">
+          <div class="card-header">
             <span class="card-icon">&#127783;</span>
             <span class="card-badge">ML</span>
           </div>
           <h3>Precipitation Prediction</h3>
-          <p data-fr="Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation." data-en="ML classification of precipitation from historical weather data. Full feature engineering, classifier comparison (RF, SVM, KNN), cross-validation evaluation.">Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation.</p>
+          <p data-fr="Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation."
+             data-en="ML classification of precipitation from historical weather data. Full feature engineering, classifier comparison (RF, SVM, KNN), cross-validation evaluation.">
+            Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Feature engineering complet, comparaison de classifieurs (RF, SVM, KNN), &eacute;valuation via cross-validation.
+          </p>
           <div class="card-tags">
             <span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">scikit-learn</span><span class="tag">ML</span>
           </div>
@@ -204,7 +254,10 @@
             <span class="card-badge">Deep Learning</span>
           </div>
           <h3>PokedexCNN</h3>
-          <p data-fr="Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out." data-en="Smart Pok&eacute;dex based on a CNN trained with PyTorch to classify Pok&eacute;mon by image. Transfer learning, data augmentation, evaluation on hold-out test set.">Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out.</p>
+          <p data-fr="Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out."
+             data-en="Smart Pok&eacute;dex based on a CNN trained with PyTorch to classify Pok&eacute;mon by image. Transfer learning, data augmentation, evaluation on hold-out test set.">
+            Pok&eacute;dex intelligent bas&eacute; sur un CNN entra&icirc;n&eacute; avec PyTorch pour classifier les Pok&eacute;mon par image. Transfer learning, data augmentation, &eacute;valuation sur jeu de test hold-out.
+          </p>
           <div class="card-tags">
             <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">PyTorch</span><span class="tag">Computer Vision</span>
           </div>
@@ -217,28 +270,14 @@
       <div class="card">
         <div class="card-body">
           <div class="card-header">
-            <span class="card-icon">&#128202;</span>
-            <span class="card-badge">Data Viz</span>
-          </div>
-          <h3>Dashboards</h3>
-          <p data-fr="Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly." data-en="Collection of custom data viz dashboards &mdash; visual exploration and advanced reporting for various business contexts with Streamlit and Plotly.">Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly.</p>
-          <div class="card-tags">
-            <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Data Viz</span>
-          </div>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/BadreddineEK/Dashboards" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <div class="card-header">
             <span class="card-icon">&#128201;</span>
-            <span class="card-badge">Acad&eacute;mique</span>
+            <span class="card-badge">Stats</span>
           </div>
           <h3>S&eacute;ries Temporelles UKgas</h3>
-          <p data-fr="Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance. Projet M1 Polytech Lyon." data-en="Analysis and modelling of the UKgas time series &mdash; stationarity tests (ADF, KPSS), ARIMA/SARIMA identification, forecasts and confidence intervals. M1 Polytech Lyon project.">Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance. Projet M1 Polytech Lyon.</p>
+          <p data-fr="Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance."
+             data-en="Analysis and modelling of the UKgas time series &mdash; stationarity tests (ADF, KPSS), ARIMA/SARIMA identification, forecasts and confidence intervals.">
+            Analyse et mod&eacute;lisation de la s&eacute;rie UKgas &mdash; tests de stationnarit&eacute; (ADF, KPSS), identification ARIMA/SARIMA, pr&eacute;visions et intervalles de confiance.
+          </p>
           <div class="card-tags">
             <span class="tag">R</span><span class="tag">ARIMA</span><span class="tag">Time Series</span><span class="tag">Stats</span>
           </div>
@@ -248,32 +287,6 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <p class="section-label">// stack technique</p>
-    <h2 class="section-title" data-fr="Technologies &amp; Outils" data-en="Technologies &amp; Tools">Technologies &amp; Outils</h2>
-    <p class="section-sub" data-fr="Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer." data-en="Technologies I use daily to design, analyse and deploy.">Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer.</p>
-    <div class="skills-grid">
-      <div class="skill-chip"><span class="icon">&#128013;</span>Python</div>
-      <div class="skill-chip"><span class="icon">&#127880;</span>Streamlit</div>
-      <div class="skill-chip"><span class="icon">&#10052;&#65039;</span>Snowflake</div>
-      <div class="skill-chip"><span class="icon">&#128452;&#65039;</span>SQL</div>
-      <div class="skill-chip"><span class="icon">&#129504;</span>Machine Learning</div>
-      <div class="skill-chip"><span class="icon">&#129302;</span>LLM / RAG</div>
-      <div class="skill-chip"><span class="icon">&#128202;</span>Data Viz</div>
-      <div class="skill-chip"><span class="icon">&#9883;&#65039;</span>React / Next.js</div>
-      <div class="skill-chip"><span class="icon">&#128220;</span>TypeScript</div>
-      <div class="skill-chip"><span class="icon">&#128011;</span>Docker</div>
-      <div class="skill-chip"><span class="icon">&#9729;&#65039;</span>Vercel</div>
-      <div class="skill-chip"><span class="icon">&#128211;</span>Jupyter</div>
-      <div class="skill-chip"><span class="icon">&#128200;</span>R / Stats</div>
-      <div class="skill-chip"><span class="icon">&#128295;</span>GitHub</div>
-      <div class="skill-chip"><span class="icon">&#128203;</span>Excel / BI</div>
     </div>
   </div>
 </section>
@@ -331,6 +344,32 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS (déplacé en fin) -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">// stack technique</p>
+    <h2 class="section-title" data-fr="Technologies &amp; Outils" data-en="Technologies &amp; Tools">Technologies &amp; Outils</h2>
+    <p class="section-sub" data-fr="Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer." data-en="Technologies I use daily to design, analyse and deploy.">Les technos que j&rsquo;utilise au quotidien pour concevoir, analyser et d&eacute;ployer.</p>
+    <div class="skills-grid">
+      <div class="skill-chip"><span class="icon">&#128013;</span>Python</div>
+      <div class="skill-chip"><span class="icon">&#127880;</span>Streamlit</div>
+      <div class="skill-chip"><span class="icon">&#10052;&#65039;</span>Snowflake</div>
+      <div class="skill-chip"><span class="icon">&#128452;&#65039;</span>SQL</div>
+      <div class="skill-chip"><span class="icon">&#129504;</span>Machine Learning</div>
+      <div class="skill-chip"><span class="icon">&#129302;</span>LLM / RAG</div>
+      <div class="skill-chip"><span class="icon">&#128202;</span>Data Viz</div>
+      <div class="skill-chip"><span class="icon">&#9883;&#65039;</span>React / Next.js</div>
+      <div class="skill-chip"><span class="icon">&#128220;</span>TypeScript</div>
+      <div class="skill-chip"><span class="icon">&#128011;</span>Docker</div>
+      <div class="skill-chip"><span class="icon">&#9729;&#65039;</span>Vercel</div>
+      <div class="skill-chip"><span class="icon">&#128211;</span>Jupyter</div>
+      <div class="skill-chip"><span class="icon">&#128200;</span>R / Stats</div>
+      <div class="skill-chip"><span class="icon">&#128295;</span>GitHub</div>
+      <div class="skill-chip"><span class="icon">&#128203;</span>Excel / BI</div>
     </div>
   </div>
 </section>
