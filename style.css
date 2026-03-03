@@ -20,9 +20,7 @@
   --radius:  14px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -70,7 +68,8 @@ nav {
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--accent2);
 }
 
@@ -249,48 +248,46 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 1.5rem;
-  /* align-items: stretch (defaut) => toutes les cartes d'une ligne ont la meme hauteur */
+  /* align-items: stretch par defaut => toutes les cartes d'une meme ligne ont la meme hauteur */
 }
 
 /*
- * CARTE
- * Architecture flex colonne :
- *   .card
- *     .card-top   (flex-grow: 1)  => prend tout l'espace disponible
- *       .card-header
- *       h3
- *       p
- *       .card-tags
- *     .card-links               => toujours colle en bas
+ * CARTE — architecture grid a 2 rangees :
  *
- * overflow: hidden garanti que rien ne depasse jamais.
- * Pas de z-index sur les enfants => flux flex normal.
- * ::before en z-index: -1 => gradient derriere tout.
+ *   a.card  (display: grid; grid-template-rows: 1fr auto)
+ *     .card-top   => rangee 1 : prend tout l'espace restant
+ *     .card-links => rangee 2 : hauteur naturelle, toujours en bas
+ *
+ * Pourquoi grid et pas flex ?
+ * Avec grid-template-rows: 1fr auto, le navigateur calcule les tailles
+ * de facon absolue et independante. Pas de conflit flex-grow / margin-top:auto.
+ * Les boutons sont TOUJOURS dans la carte, quoi qu'il arrive.
  */
 a.card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;   /* top grandit, links reste en bas */
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.6rem;
-  overflow: hidden;               /* boutons TOUJOURS dans la carte */
   position: relative;
   text-decoration: none;
   color: var(--text);
   cursor: pointer;
   transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  /* Pas d'overflow:hidden => pas de stacking context parasite au hover */
 }
 
 a.card::before {
   content: '';
   position: absolute;
   inset: 0;
+  border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(108, 99, 255, 0.07) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
-  z-index: -1;                    /* derriere tout le contenu */
+  z-index: 0;
 }
 
 a.card:hover {
@@ -303,11 +300,17 @@ a.card:hover::before {
   opacity: 1;
 }
 
-/* card-top grandit pour remplir l'espace => card-links reste en bas */
+/* Tout le contenu au-dessus du ::before */
+a.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- card-top : zone de contenu ---- */
 .card-top {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  /* pas de flex:1 ici, c'est grid-template-rows qui gere */
 }
 
 .card-header {
@@ -352,11 +355,9 @@ a.card h3 {
   color: var(--text);
 }
 
-/* flex-grow pousse .card-tags vers le bas naturellement */
 a.card p {
   font-size: 0.88rem;
   color: var(--text2);
-  flex-grow: 1;
   margin-bottom: 1rem;
 }
 
@@ -364,8 +365,8 @@ a.card p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 0;
-  margin-top: auto;
+  margin-top: auto;   /* colle les tags en bas du card-top */
+  padding-bottom: 0;
 }
 
 .tag {
@@ -377,7 +378,7 @@ a.card p {
   color: var(--text2);
 }
 
-/* Separateur visuel avant les boutons */
+/* ---- card-links : toujours en bas grace a grid-template-rows: auto ---- */
 .card-links {
   display: flex;
   gap: 0.6rem;
@@ -405,21 +406,38 @@ a.card p {
   cursor: pointer;
 }
 
+.card-btn:hover {
+  background: rgba(108, 99, 255, 0.22);
+  border-color: var(--accent2);
+}
+
 .card-btn.live {
   color: #22c55e;
   background: rgba(34, 197, 94, 0.08);
   border-color: rgba(34, 197, 94, 0.35);
 }
 
-/* Lien secondaire (GitHub dans une carte avec app live) */
-a.card-btn.secondary {
-  position: relative;
-  z-index: 1;
+.card-btn.live:hover {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: #22c55e;
 }
 
-a.card-btn.secondary:hover {
-  background: rgba(108, 99, 255, 0.22);
-  border-color: var(--accent2);
+.card-btn.secondary {
+  /* lien GitHub dans une carte avec deja un lien live */
+}
+
+/* =============================================
+   FADE-IN (IntersectionObserver dans script.js)
+   ============================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =============================================
