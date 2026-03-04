@@ -9,8 +9,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Cross-portfolio floating button ── */
+    .version-switcher {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+    .version-switcher a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(124,58,237,0.35);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      white-space: nowrap;
+    }
+    .version-switcher a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(124,58,237,0.45);
+    }
+    .version-switcher .vs-label {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.7);
+      text-align: right;
+      padding-right: 0.4rem;
+    }
+    @media (max-width: 600px) {
+      .version-switcher { bottom: 1.2rem; right: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
+
+<!-- ── CROSS-PORTFOLIO SWITCHER ── -->
+<div class="version-switcher">
+  <span class="vs-label" data-fr="Essayer la version interactive" data-en="Try the interactive version">Essayer la version interactive</span>
+  <a href="https://chatbot-portfolio-eosin.vercel.app" target="_blank" rel="noopener">
+    <span>&#129302;</span>
+    <span data-fr="Version IA &amp; Chatbot" data-en="AI &amp; Chatbot version">Version IA &amp; Chatbot</span>
+    <span>&#8599;</span>
+  </a>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -98,6 +151,7 @@
           <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">DuckDB</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span><span class="tag">GitHub Actions</span><span class="tag">GMP / Pharma</span></div>
         </div>
         <div class="card-links">
+          <a href="https://pharmakpi.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
           <a href="https://github.com/BadreddineEK/pharma-kpi-platform" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
         </div>
       </div>
@@ -379,7 +433,7 @@
         <div class="stat-box"><div class="num">3</div><div class="label" data-fr="Dipl&ocirc;mes obtenus" data-en="Degrees obtained">Dipl&ocirc;mes obtenus</div></div>
         <div class="stat-box"><div class="num">2</div><div class="label" data-fr="Stages 6 mois" data-en="6-month internships">Stages 6 mois</div></div>
         <div class="stat-box"><div class="num">3h43</div><div class="label" data-fr="Marathon perso" data-en="Personal marathon">Marathon perso</div></div>
-        <div class="stat-box"><div class="num">6+</div><div class="label" data-fr="Apps &amp; projets" data-en="Apps &amp; projects">Apps &amp; projets</div></div>
+        <div class="stat-box"><div class="num">7+</div><div class="label" data-fr="Apps &amp; projets" data-en="Apps &amp; projects">Apps &amp; projets</div></div>
       </div>
     </div>
   </div>
