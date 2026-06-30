@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html lang="fr" data-lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Badreddine EL KHAMLICHI &mdash; Data Scientist &amp; Builder</title>
-  <meta name="description" content="Portfolio de Badreddine EL KHAMLICHI, Data Scientist &amp; Problem Solver." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Badreddine EL KHAMLICHI, Data Scientist</title>
+  <meta name="description" content="Portfolio de Badreddine EL KHAMLICHI, Data Scientist a Lyon. Applications data, outils sur mesure et projets ML." />
+  <meta property="og:title" content="Badreddine EL KHAMLICHI, Data Scientist" />
+  <meta property="og:description" content="Applications data, outils sur mesure et projets ML." />
+  <meta property="og:url" content="https://portfolio.badreddineek.com" />
+  <link rel="canonical" href="https://portfolio.badreddineek.com" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2301696f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='900' text-anchor='middle' fill='white'%3EBK%3C/text%3E%3C/svg%3E" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .version-switcher {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0.45rem;
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem;
     }
     .version-switcher .vs-label {
-      font-size: 0.65rem; font-family: 'JetBrains Mono', monospace;
-      color: rgba(255,255,255,0.6); background: rgba(15,23,42,0.55);
-      backdrop-filter: blur(6px); padding: 0.2rem 0.6rem; border-radius: 999px; text-align: right;
+      font-size: 0.7rem; color: var(--txm);
+      padding-right: 0.3rem; text-align: right;
     }
     .version-switcher a {
-      display: inline-flex; align-items: center; gap: 0.55rem;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #2563eb 100%);
-      color: #e2e8f0; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
-      font-weight: 600; letter-spacing: 0.03em; padding: 0.6rem 1.1rem; border-radius: 999px;
-      text-decoration: none; box-shadow: 0 0 0 1px rgba(37,99,235,0.4), 0 6px 24px rgba(15,23,42,0.5);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease; white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--sf); border: 1px solid var(--bd);
+      color: var(--txm); font-size: 0.78rem; font-weight: 600;
+      padding: 0.5rem 1rem; border-radius: 9999px;
+      text-decoration: none; box-shadow: var(--sh);
+      transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease; white-space: nowrap;
     }
     .version-switcher a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 0 1px rgba(37,99,235,0.7), 0 10px 32px rgba(37,99,235,0.35);
-      background: linear-gradient(135deg, #1e293b 0%, #1d4ed8 100%);
+      transform: translateY(-2px); color: var(--tx);
+      border-color: oklch(from var(--ac) l c h/.4);
     }
     .version-switcher a .vs-dot {
-      width: 7px; height: 7px; background: #22d3ee; border-radius: 50%;
-      box-shadow: 0 0 6px #22d3ee; flex-shrink: 0;
+      width: 7px; height: 7px; background: var(--ac); border-radius: 50%;
+      flex-shrink: 0;
     }
     @media (max-width: 600px) { .version-switcher { bottom: 1.2rem; right: 1.2rem; } }
   </style>
@@ -45,13 +46,13 @@
   <span class="vs-label" data-fr="Version interactive" data-en="Interactive version">Version interactive</span>
   <a href="https://badreddineek.github.io/portfolio-ai/" target="_blank" rel="noopener">
     <span class="vs-dot"></span>
-    <span data-fr="BEK.ai &mdash; Version IA" data-en="BEK.ai &mdash; AI version">BEK.ai &mdash; Version IA</span>
+    <span data-fr="Version BEK.ai" data-en="BEK.ai version">Version BEK.ai</span>
     <span>&#8599;</span>
   </a>
 </div>
 
 <nav>
-  <span class="nav-logo">BEK.</span>
+  <span class="nav-logo">Badreddine<span class="ac">EK</span></span>
   <ul class="nav-links">
     <li><a href="#approach" data-fr="Approche" data-en="Approach">Approche</a></li>
     <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
@@ -61,30 +62,33 @@
     <li><a href="#skills" data-fr="Stack" data-en="Stack">Stack</a></li>
     <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
   </ul>
-  <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+  <div class="nav-right">
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+    <button class="tgl" data-tgl aria-label="Changer de th&egrave;me"></button>
+  </div>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="dot"></span>
-      <span data-fr="Disponible pour missions &amp; collaborations" data-en="Available for missions &amp; collaborations">Disponible pour missions &amp; collaborations</span>
+      <span data-fr="Disponible pour missions et collaborations" data-en="Available for missions and collaborations">Disponible pour missions et collaborations</span>
     </div>
     <h1>
       <span class="name">Badreddine EL KHAMLICHI</span>
       <span class="role">Data Scientist &middot; Problem Solver &middot; Builder</span>
     </h1>
     <p class="hero-desc"
-       data-fr="Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es, ce qui m&rsquo;anime c&rsquo;est le problem solving &mdash; partir d&rsquo;un vrai probl&egrave;me m&eacute;tier, comprendre ce qu&rsquo;il faut r&eacute;soudre, puis mobiliser les bons outils pour livrer une solution qui fonctionne."
-       data-en="Applied mathematics engineer. What drives me is problem solving &mdash; starting from a real business challenge, understanding what actually needs fixing, then using the right tools to ship something that works.">
-      Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es, ce qui m&rsquo;anime c&rsquo;est le problem solving &mdash; partir d&rsquo;un vrai probl&egrave;me m&eacute;tier, comprendre ce qu&rsquo;il faut r&eacute;soudre, puis mobiliser les bons outils pour livrer une solution qui fonctionne.
+       data-fr="Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es. Je pars d&rsquo;un probl&egrave;me m&eacute;tier concret, je d&eacute;finis ce qu&rsquo;il faut r&eacute;soudre, puis je livre une solution qui fonctionne."
+       data-en="Applied mathematics engineer. I start from a concrete business problem, define what actually needs solving, then ship a solution that works.">
+      Ing&eacute;nieur en math&eacute;matiques appliqu&eacute;es. Je pars d&rsquo;un probl&egrave;me m&eacute;tier concret, je d&eacute;finis ce qu&rsquo;il faut r&eacute;soudre, puis je livre une solution qui fonctionne.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">
-        <span data-fr="&#128640; Voir mes projets" data-en="&#128640; See my projects">&#128640; Voir mes projets</span>
+        <span data-fr="Voir mes projets" data-en="See my projects">Voir mes projets</span>
       </a>
-      <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" class="btn btn-ghost" id="cvBtn">
-        <span data-fr="&#128196; T&eacute;l&eacute;charger CV" data-en="&#128196; Download CV">&#128196; T&eacute;l&eacute;charger CV</span>
+      <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="btn btn-ghost">
+        <span>LinkedIn</span>
       </a>
     </div>
   </div>
@@ -97,19 +101,17 @@
     <div class="approach-layout">
       <div class="approach-text">
         <p class="approach-lead" data-fr="Je ne pars pas d&rsquo;une techno. Je pars d&rsquo;un probl&egrave;me." data-en="I don&rsquo;t start from a technology. I start from a problem.">Je ne pars pas d&rsquo;une techno. Je pars d&rsquo;un probl&egrave;me.</p>
-        <p data-fr="Ma formation en maths appliqu&eacute;es m&rsquo;a appris une chose : avant de choisir un outil, il faut comprendre ce qu&rsquo;on cherche vraiment &agrave; r&eacute;soudre. Un probl&egrave;me m&eacute;tier mal d&eacute;fini donne un mod&egrave;le ML inutile. Un bon cadrage donne parfois une r&egrave;gle m&eacute;tier simple &mdash; et c&rsquo;est suffisant." data-en="My applied maths background taught me one thing: before picking a tool, understand what you&rsquo;re actually trying to solve. A poorly defined business problem produces a useless ML model. Good framing sometimes yields a simple business rule &mdash; and that&rsquo;s enough.">Ma formation en maths appliqu&eacute;es m&rsquo;a appris une chose : avant de choisir un outil, il faut comprendre ce qu&rsquo;on cherche vraiment &agrave; r&eacute;soudre. Un probl&egrave;me m&eacute;tier mal d&eacute;fini donne un mod&egrave;le ML inutile. Un bon cadrage donne parfois une r&egrave;gle m&eacute;tier simple &mdash; et c&rsquo;est suffisant.</p>
-        <p data-fr="Dans mon p&eacute;rim&egrave;tre &mdash; data, automatisation, outils sur mesure &mdash; l&rsquo;objectif est toujours le m&ecirc;me : r&eacute;duire la friction, lib&eacute;rer du temps, aider une &eacute;quipe ou une entreprise &agrave; passer &agrave; l&rsquo;&eacute;chelle sur ce qui compte vraiment." data-en="Within my scope &mdash; data, automation, custom tools &mdash; the goal is always the same: reduce friction, free up time, help a team or company scale on what actually matters.">Dans mon p&eacute;rim&egrave;tre &mdash; data, automatisation, outils sur mesure &mdash; l&rsquo;objectif est toujours le m&ecirc;me : r&eacute;duire la friction, lib&eacute;rer du temps, aider une &eacute;quipe ou une entreprise &agrave; passer &agrave; l&rsquo;&eacute;chelle sur ce qui compte vraiment.</p>
+        <p data-fr="Ma formation en maths appliqu&eacute;es m&rsquo;a appris une chose : avant de choisir un outil, il faut comprendre ce qu&rsquo;on cherche vraiment &agrave; r&eacute;soudre. Un probl&egrave;me m&eacute;tier mal d&eacute;fini donne un mod&egrave;le ML inutile. Un bon cadrage donne parfois une simple r&egrave;gle m&eacute;tier, et c&rsquo;est suffisant." data-en="My applied maths background taught me one thing: before picking a tool, understand what you&rsquo;re actually trying to solve. A poorly defined business problem produces a useless ML model. Good framing sometimes yields a simple business rule, and that&rsquo;s enough.">Ma formation en maths appliqu&eacute;es m&rsquo;a appris une chose : avant de choisir un outil, il faut comprendre ce qu&rsquo;on cherche vraiment &agrave; r&eacute;soudre. Un probl&egrave;me m&eacute;tier mal d&eacute;fini donne un mod&egrave;le ML inutile. Un bon cadrage donne parfois une simple r&egrave;gle m&eacute;tier, et c&rsquo;est suffisant.</p>
+        <p data-fr="Sur mon p&eacute;rim&egrave;tre (data, automatisation, outils sur mesure), l&rsquo;objectif reste le m&ecirc;me : r&eacute;duire la friction, lib&eacute;rer du temps, aider une &eacute;quipe &agrave; se concentrer sur ce qui compte." data-en="Across my scope (data, automation, custom tools), the goal stays the same: reduce friction, free up time, help a team focus on what matters.">Sur mon p&eacute;rim&egrave;tre (data, automatisation, outils sur mesure), l&rsquo;objectif reste le m&ecirc;me : r&eacute;duire la friction, lib&eacute;rer du temps, aider une &eacute;quipe &agrave; se concentrer sur ce qui compte.</p>
       </div>
       <div class="approach-cards">
         <div class="approach-card">
-          <span class="approach-card-icon">&#128208;</span>
           <h3 data-fr="Du probl&egrave;me au livrable" data-en="From problem to deliverable">Du probl&egrave;me au livrable</h3>
-          <p>Je suis &agrave; l&rsquo;aise aussi bien dans la phase d&rsquo;analyse que dans la phase de livraison (un dashboard qui tourne, un pipeline qui s&rsquo;ex&eacute;cute, une app d&eacute;ploy&eacute;e). Pas juste un notebook, un vrai r&eacute;sultat.</p>
+          <p>Je suis &agrave; l&rsquo;aise dans la phase d&rsquo;analyse comme dans la phase de livraison : un dashboard qui tourne, un pipeline qui s&rsquo;ex&eacute;cute, une app d&eacute;ploy&eacute;e. Pas juste un notebook, un r&eacute;sultat utilisable.</p>
         </div>
         <div class="approach-card">
-          <span class="approach-card-icon">&#128736;&#65039;</span>
           <h3 data-fr="Construit hors des heures aussi" data-en="Built outside work hours too">Construit hors des heures aussi</h3>
-          <p>GoldSignal, ForecastingLLM, Job Market Analyzer &mdash; ce ne sont pas des projets de cours. Ce sont des id&eacute;es que j&rsquo;avais, des probl&egrave;mes que j&rsquo;ai voulu r&eacute;soudre, architectur&eacute;s et livr&eacute;s seul.</p>
+          <p>GoldSignal, ForecastingLLM et Job Market Analyzer ne sont pas des projets de cours. Ce sont des id&eacute;es que j&rsquo;avais et des probl&egrave;mes que j&rsquo;ai voulu r&eacute;soudre, architectur&eacute;s et livr&eacute;s seul.</p>
         </div>
       </div>
     </div>
@@ -119,130 +121,130 @@
 <section id="projects">
   <div class="container">
     <p class="section-label">// projets</p>
-    <h2 class="section-title" data-fr="&#128640; Projets" data-en="&#128640; Projects">&#128640; Projets</h2>
+    <h2 class="section-title" data-fr="Projets" data-en="Projects">Projets</h2>
     <p class="section-sub" data-fr="Applications d&eacute;ploy&eacute;es, outils data et produits construits pour r&eacute;soudre de vrais probl&egrave;mes." data-en="Deployed applications, data tools and products built to solve real problems.">Applications d&eacute;ploy&eacute;es, outils data et produits construits pour r&eacute;soudre de vrais probl&egrave;mes.</p>
     <div class="projects-grid">
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#129302;</span><span class="card-badge green">&#10003; D&eacute;ploy&eacute;</span></div>
+          <div class="card-header"><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
           <h3>Job Market Analyzer</h3>
-          <p>Analyseur de march&eacute; de l&rsquo;emploi LLM-powered &mdash; scraping d&rsquo;offres d&rsquo;emploi, analyse s&eacute;mantique et insights personnalis&eacute;s. LangChain + Groq + Streamlit.</p>
+          <p>Analyseur de march&eacute; de l&rsquo;emploi propuls&eacute; par LLM : scraping d&rsquo;offres, analyse s&eacute;mantique et insights personnalis&eacute;s. LangChain, Groq et Streamlit.</p>
           <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">LangChain</span><span class="tag">Groq</span><span class="tag">LLM</span></div>
         </div>
         <div class="card-links">
-          <a href="https://job-market-analyzer-llm.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/job-market-analyzer" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://job-market-analyzer-llm.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/job-market-analyzer" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#127891;</span><span class="card-badge green">&#10003; D&eacute;ploy&eacute;</span></div>
+          <div class="card-header"><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
           <h3>Streamlit Intro</h3>
-          <p>App Streamlit interactive pour apprendre Streamlit &mdash; widgets, dataviz, d&eacute;ploiement. Ressource p&eacute;dagogique open-source.</p>
+          <p>App Streamlit interactive pour apprendre Streamlit : widgets, dataviz et d&eacute;ploiement. Ressource p&eacute;dagogique open-source.</p>
           <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">P&eacute;dagogie</span></div>
         </div>
         <div class="card-links">
-          <a href="https://streamapp-intro.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/streamlit-intro" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://streamapp-intro.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/streamlit-intro" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#128138;</span><span class="card-badge green">&#10003; D&eacute;ploy&eacute;</span></div>
+          <div class="card-header"><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
           <h3>Pharma KPI Platform</h3>
-          <p>Plateforme data end-to-end de monitoring KPI manufacturing pour un r&eacute;seau pharmaceutique multi-sites. Pipeline ETL + DuckDB + Streamlit 4 pages : Overview, Site Detail, Forecasting ML (OLS + intervalles 95%), Alerts. CI/CD GitHub Actions.</p>
+          <p>Plateforme data end-to-end de monitoring KPI manufacturing pour un r&eacute;seau pharmaceutique multi-sites. Pipeline ETL, DuckDB et Streamlit sur 4 pages : Overview, Site Detail, Forecasting ML (OLS avec intervalles 95%) et Alerts. CI/CD GitHub Actions.</p>
           <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">DuckDB</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span><span class="tag">GitHub Actions</span><span class="tag">GMP / Pharma</span></div>
         </div>
         <div class="card-links">
-          <a href="https://pharmakpi.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/pharma-kpi-platform" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://pharmakpi.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/pharma-kpi-platform" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#128300;</span><span class="card-badge green">&#10003; D&eacute;ploy&eacute;</span></div>
-          <h3>ForecastingLLM &mdash; AI Lab</h3>
-          <p>Laboratoire d&rsquo;&eacute;valuation probabiliste d&rsquo;un LLM (GPT-5.2) sur 3 domaines : M&eacute;t&eacute;o (35 pr&eacute;dictions, 5 villes), March&eacute;s financiers europ&eacute;ens (10 actifs) et Performance sportive (marathon). Protocole rigoureux anti-data-leakage, m&eacute;triques Brier Score + MAE.</p>
-          <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">LLM</span><span class="tag">Probabilistic Forecasting</span><span class="tag">Plotly</span><span class="tag">SciPy</span><span class="tag">Exp&eacute;rimental</span></div>
+          <div class="card-header"><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
+          <h3>ForecastingLLM</h3>
+          <p>Laboratoire d&rsquo;&eacute;valuation probabiliste d&rsquo;un LLM (GPT-5.2) sur 3 domaines : m&eacute;t&eacute;o (35 pr&eacute;dictions, 5 villes), march&eacute;s financiers europ&eacute;ens (10 actifs) et performance sportive (marathon). Protocole anti-data-leakage, m&eacute;triques Brier Score et MAE.</p>
+          <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">LLM</span><span class="tag">Probabilistic Forecasting</span><span class="tag">Plotly</span><span class="tag">SciPy</span></div>
         </div>
         <div class="card-links">
-          <a href="https://forecasting-llm.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/ForecastingLLM" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://forecasting-llm.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/ForecastingLLM" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#127981;</span><span class="card-badge gold">&#9889; Actif</span></div>
+          <div class="card-header"><span class="card-badge gold">Actif</span></div>
           <h3>GoldSignal</h3>
-          <p>App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) en walk-forward strict &mdash; z&eacute;ro data leakage. 40+ features engineer&eacute;es, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable.</p>
+          <p>App Streamlit multi-pages pour m&eacute;taux pr&eacute;cieux physiques. 6 mod&egrave;les ML (RF, XGBoost, LSTM, Stacking) en walk-forward strict, sans data leakage. 40+ features, backtesting P&amp;L (Sharpe, alpha vs B&amp;H), simulateur Monte-Carlo, PWA installable.</p>
           <div class="card-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">PyTorch</span><span class="tag">yfinance</span><span class="tag">PWA</span></div>
         </div>
         <div class="card-links">
-          <a href="https://goldsignaltime.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/goldSignal" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://goldsignaltime.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/goldSignal" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#129302;</span><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
+          <div class="card-header"><span class="card-badge green">D&eacute;ploy&eacute;</span></div>
           <h3>Chatbot Portfolio</h3>
-          <p>Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript + API LLM, d&eacute;ploy&eacute; sur Vercel.</p>
+          <p>Chatbot IA int&eacute;gr&eacute; &agrave; un portfolio Next.js. R&eacute;pond aux questions sur le profil et les projets via un LLM. Stack TypeScript et API LLM, d&eacute;ploy&eacute; sur Vercel.</p>
           <div class="card-tags"><span class="tag">TypeScript</span><span class="tag">LLM</span><span class="tag">Next.js</span><span class="tag">Vercel</span></div>
         </div>
         <div class="card-links">
-          <a href="https://chatbot-portfolio-eosin.vercel.app" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-          <a href="https://github.com/BadreddineEK/chatbot-portfolio" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://chatbot-portfolio-eosin.vercel.app" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+          <a href="https://github.com/BadreddineEK/chatbot-portfolio" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <div class="card-header"><span class="card-icon">&#128202;</span><span class="card-badge">Data Viz</span></div>
+          <div class="card-header"><span class="card-badge">Data Viz</span></div>
           <h3>Dashboards</h3>
-          <p>Collection de dashboards data viz sur mesure &mdash; exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier avec Streamlit et Plotly.</p>
+          <p>Collection de dashboards data viz sur mesure : exploration visuelle et reporting avanc&eacute; pour diff&eacute;rents contextes m&eacute;tier, avec Streamlit et Plotly.</p>
           <div class="card-tags"><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Data Viz</span></div>
         </div>
         <div class="card-links">
-          <a href="https://github.com/BadreddineEK/Dashboards" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+          <a href="https://github.com/BadreddineEK/Dashboards" target="_blank" rel="noopener" class="card-btn">GitHub</a>
         </div>
       </div>
     </div>
     <div class="labs-sub">
-      <p class="labs-sub-label" data-fr="&#128300; Travaux &amp; Explorations acad&eacute;miques" data-en="&#128300; Academic Research &amp; Explorations">&#128300; Travaux &amp; Explorations acad&eacute;miques</p>
+      <p class="labs-sub-label" data-fr="Travaux et explorations acad&eacute;miques" data-en="Academic research and explorations">Travaux et explorations acad&eacute;miques</p>
       <div class="projects-grid">
         <div class="card card-lab">
           <div class="card-body">
-            <div class="card-header"><span class="card-icon">&#127783;</span><span class="card-badge">ML</span></div>
+            <div class="card-header"><span class="card-badge">ML</span></div>
             <h3>Precipitation Prediction</h3>
             <p>Classification ML de pr&eacute;cipitations sur donn&eacute;es m&eacute;t&eacute;o historiques. Comparaison de classifieurs (RF, SVM, KNN), feature engineering, cross-validation.</p>
             <div class="card-tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">ML</span></div>
           </div>
           <div class="card-links">
-            <a href="https://prediction-precipitation.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-            <a href="https://github.com/BadreddineEK/-PrecipitationPrediction-" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+            <a href="https://prediction-precipitation.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+            <a href="https://github.com/BadreddineEK/-PrecipitationPrediction-" target="_blank" rel="noopener" class="card-btn">GitHub</a>
           </div>
         </div>
         <div class="card card-lab">
           <div class="card-body">
-            <div class="card-header"><span class="card-icon">&#9889;</span><span class="card-badge">Deep Learning</span></div>
+            <div class="card-header"><span class="card-badge">Deep Learning</span></div>
             <h3>PokedexCNN</h3>
             <p>CNN PyTorch pour classification d&rsquo;images Pok&eacute;mon. Transfer learning, data augmentation, &eacute;valuation hold-out.</p>
             <div class="card-tags"><span class="tag">Python</span><span class="tag">CNN</span><span class="tag">PyTorch</span></div>
           </div>
           <div class="card-links">
-            <a href="https://pokedex-cnn.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-            <a href="https://github.com/BadreddineEK/pokedexCNN" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+            <a href="https://pokedex-cnn.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+            <a href="https://github.com/BadreddineEK/pokedexCNN" target="_blank" rel="noopener" class="card-btn">GitHub</a>
           </div>
         </div>
         <div class="card card-lab">
           <div class="card-body">
-            <div class="card-header"><span class="card-icon">&#128201;</span><span class="card-badge">Stats</span></div>
+            <div class="card-header"><span class="card-badge">Stats</span></div>
             <h3>S&eacute;ries Temporelles UKgas</h3>
             <p>Mod&eacute;lisation ARIMA/SARIMA de la s&eacute;rie UKgas. Tests ADF/KPSS, identification, pr&eacute;visions et intervalles de confiance.</p>
             <div class="card-tags"><span class="tag">R</span><span class="tag">ARIMA</span><span class="tag">Time Series</span></div>
           </div>
           <div class="card-links">
-            <a href="https://serie-temporelles-ukgas.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">&#128994; App live</a>
-            <a href="https://github.com/BadreddineEK/Serie_Temporelles_UKgas" target="_blank" rel="noopener" class="card-btn">GitHub &#8599;</a>
+            <a href="https://serie-temporelles-ukgas.streamlit.app/" target="_blank" rel="noopener" class="card-btn live">App en ligne</a>
+            <a href="https://github.com/BadreddineEK/Serie_Temporelles_UKgas" target="_blank" rel="noopener" class="card-btn">GitHub</a>
           </div>
         </div>
       </div>
@@ -260,8 +262,8 @@
         <div class="exp-content">
           <div class="exp-header">
             <div>
-              <span class="exp-date" data-fr="Avr. 2025 &mdash; Pr&eacute;sent" data-en="Apr. 2025 &mdash; Present">Avr. 2025 &mdash; Pr&eacute;sent</span>
-              <h3 class="exp-title">Data Scientist <span class="exp-company">&mdash; Efor</span></h3>
+              <span class="exp-date" data-fr="Depuis avr. 2025" data-en="Since Apr. 2025">Depuis avr. 2025</span>
+              <h3 class="exp-title">Data Scientist <span class="exp-company">&middot; Efor</span></h3>
               <p class="exp-location">Mission client : Boehringer Ingelheim, Lyon LPA &middot; CDI</p>
             </div>
             <span class="exp-badge active-badge" data-fr="En poste" data-en="Current">En poste</span>
@@ -269,7 +271,7 @@
           <ul class="exp-bullets">
             <li>Conception et livraison d&rsquo;applications Streamlit sur mesure pour 3 d&eacute;partements scientifiques.</li>
             <li>Automatisation de processus data : pipelines, standardisation, reporting automatique.</li>
-            <li>Pilotage projets data end-to-end &mdash; data / IT / scientifiques / France-Allemagne-US.</li>
+            <li>Pilotage de projets data end-to-end avec les &eacute;quipes data, IT et scientifiques (France, Allemagne, US).</li>
           </ul>
           <div class="exp-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">SQL</span><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">Git</span></div>
         </div>
@@ -279,8 +281,8 @@
         <div class="exp-content">
           <div class="exp-header">
             <div>
-              <span class="exp-date">Avr. 2024 &mdash; Sept. 2024 &middot; 6 mois</span>
-              <h3 class="exp-title">ML / Data Science Engineer <span class="exp-company">&mdash; BIOASTER</span></h3>
+              <span class="exp-date">Avr. 2024 &agrave; sept. 2024 &middot; 6 mois</span>
+              <h3 class="exp-title">ML / Data Science Engineer <span class="exp-company">&middot; BIOASTER</span></h3>
               <p class="exp-location">Lyon, France &middot; Stage PFE</p>
             </div>
             <span class="exp-badge">Stage PFE</span>
@@ -288,7 +290,7 @@
           <ul class="exp-bullets">
             <li>3 architectures d&rsquo;autoencodeurs (vanilla, denoising, sparsity) sur RNA-seq.</li>
             <li>Benchmarking PCA vs UMAP vs t-SNE sur donn&eacute;es biom&eacute;dicales complexes.</li>
-            <li>Agile/Scrum (Jira) &mdash; it&eacute;rations rigoureuses.</li>
+            <li>Agile/Scrum sous Jira, it&eacute;rations courtes.</li>
           </ul>
           <div class="exp-tags"><span class="tag">PyTorch</span><span class="tag">Autoencodeurs</span><span class="tag">RNA-seq</span><span class="tag">UMAP</span><span class="tag">scikit-learn</span></div>
         </div>
@@ -298,15 +300,15 @@
         <div class="exp-content">
           <div class="exp-header">
             <div>
-              <span class="exp-date">Ao&ucirc;t 2022 &mdash; Janv. 2023 &middot; 6 mois</span>
-              <h3 class="exp-title">Data Scientist / Data Analyst <span class="exp-company">&mdash; Aluminium du Maroc</span></h3>
+              <span class="exp-date">Ao&ucirc;t 2022 &agrave; janv. 2023 &middot; 6 mois</span>
+              <h3 class="exp-title">Data Scientist / Data Analyst <span class="exp-company">&middot; Aluminium du Maroc</span></h3>
               <p class="exp-location">Tanger, Maroc &middot; Stage 4A</p>
             </div>
             <span class="exp-badge">Stage 4A</span>
           </div>
           <ul class="exp-bullets">
-            <li>Dashboard multi-d&eacute;partements KPI pour managers &amp; directeurs.</li>
-            <li>Automatisation VBA/Excel &mdash; r&eacute;duction du traitement manuel.</li>
+            <li>Dashboard multi-d&eacute;partements KPI pour managers et directeurs.</li>
+            <li>Automatisation VBA/Excel pour r&eacute;duire le traitement manuel.</li>
             <li>Rapports Power BI accessibles aux non-techniciens.</li>
           </ul>
           <div class="exp-tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">VBA</span><span class="tag">SQL</span></div>
@@ -317,8 +319,8 @@
         <div class="exp-content">
           <div class="exp-header">
             <div>
-              <span class="exp-date">2019 &mdash; 2025</span>
-              <h3 class="exp-title">Professeur particulier &mdash; Maths &amp; Sciences</h3>
+              <span class="exp-date">2019 &agrave; 2025</span>
+              <h3 class="exp-title">Professeur particulier, maths et sciences</h3>
               <p class="exp-location">Tous niveaux jusqu&rsquo;au Terminale</p>
             </div>
           </div>
@@ -334,32 +336,38 @@
     <h2 class="section-title" data-fr="Formation acad&eacute;mique" data-en="Academic Background">Formation acad&eacute;mique</h2>
     <div class="edu-grid">
       <div class="edu-card">
-        <div class="edu-card-top"><span class="edu-icon">&#127979;</span>
-          <div><span class="edu-date">2019 &mdash; 2024</span><h3>Dipl&ocirc;me d&rsquo;Ing&eacute;nieur</h3><p class="edu-school">Polytech Lyon &mdash; Universit&eacute; Claude Bernard</p></div>
+        <div class="edu-card-top">
+          <span class="edu-date">2019 &agrave; 2024</span>
+          <h3>Dipl&ocirc;me d&rsquo;Ing&eacute;nieur</h3>
+          <p class="edu-school">Polytech Lyon, Universit&eacute; Claude Bernard</p>
         </div>
         <ul class="edu-bullets">
-          <li>Sp&eacute;cialisation MAM &mdash; Math&eacute;matiques Appliqu&eacute;es &amp; Mod&eacute;lisation</li>
-          <li>&#127942; Major de promotion (semestre stage 4A)</li>
-          <li>2 stages longs 6 mois : BIOASTER &amp; Aluminium du Maroc</li>
+          <li>Sp&eacute;cialisation MAM : math&eacute;matiques appliqu&eacute;es et mod&eacute;lisation</li>
+          <li>Major de promotion (semestre stage 4A)</li>
+          <li>2 stages de 6 mois : BIOASTER et Aluminium du Maroc</li>
         </ul>
         <div class="edu-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">C++</span><span class="tag">ML</span><span class="tag">Optimisation</span></div>
       </div>
       <div class="edu-card">
-        <div class="edu-card-top"><span class="edu-icon">&#128202;</span>
-          <div><span class="edu-date">2022 &mdash; 2024</span><h3>Master Maths en Action</h3><p class="edu-school">UCBL1 &mdash; Universit&eacute; Claude Bernard Lyon 1</p></div>
+        <div class="edu-card-top">
+          <span class="edu-date">2022 &agrave; 2024</span>
+          <h3>Master Maths en Action</h3>
+          <p class="edu-school">Universit&eacute; Claude Bernard Lyon 1</p>
         </div>
         <ul class="edu-bullets">
           <li>Double dipl&ocirc;me en parall&egrave;le du cursus Polytech</li>
-          <li>Majeure : Environnement &amp; Changement Climatique</li>
+          <li>Majeure : environnement et changement climatique</li>
         </ul>
         <div class="edu-tags"><span class="tag">Stochastique</span><span class="tag">Probabilit&eacute;s</span><span class="tag">R</span></div>
       </div>
       <div class="edu-card">
-        <div class="edu-card-top"><span class="edu-icon">&#128188;</span>
-          <div><span class="edu-date">2022 &mdash; 2024</span><h3>Master MAE</h3><p class="edu-school">IAE Lyon &mdash; Universit&eacute; Jean Moulin</p></div>
+        <div class="edu-card-top">
+          <span class="edu-date">2022 &agrave; 2024</span>
+          <h3>Master MAE</h3>
+          <p class="edu-school">IAE Lyon, Universit&eacute; Jean Moulin</p>
         </div>
         <ul class="edu-bullets">
-          <li>Triple dipl&ocirc;me &mdash; vision business + technique</li>
+          <li>Triple dipl&ocirc;me, vision business et technique</li>
           <li>Management, strat&eacute;gie, finance, gestion de projet</li>
         </ul>
         <div class="edu-tags"><span class="tag">Management</span><span class="tag">Strat&eacute;gie</span><span class="tag">Finance</span></div>
@@ -371,21 +379,22 @@
 <section id="about">
   <div class="container">
     <p class="section-label">// profil</p>
-    <h2 class="section-title">En dehors du travail</h2>
+    <h2 class="section-title" data-fr="En dehors du travail" data-en="Outside work">En dehors du travail</h2>
     <div class="about-mini">
       <div class="about-mini-text">
-        <p>Coureur de fond (marathon 3h43 &#127939;), passionn&eacute; de finance &amp; investissement et de construction de micro-SaaS pour r&eacute;soudre des probl&egrave;mes concrets.</p>
-        <div class="about-btns" style="margin-top:1.2rem">
-          <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="btn btn-ghost">GitHub &#8599;</a>
-          <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn &#8599;</a>
-          <a href="https://share.streamlit.io/user/badreddineek" target="_blank" rel="noopener" class="btn btn-ghost">&#127880; Streamlit Cloud &#8599;</a>             <a href="https://labs.badreddineek.com/" target="_blank" rel="noopener" class="social-btn">&#127981; Labs</a>
+        <p>Coureur de fond (marathon en 3h43), int&eacute;ress&eacute; par la finance et l&rsquo;investissement. Je construis aussi des micro-SaaS pour r&eacute;soudre des probl&egrave;mes concrets.</p>
+        <div class="about-btns">
+          <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+          <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://share.streamlit.io/user/badreddineek" target="_blank" rel="noopener" class="btn btn-ghost">Streamlit Cloud</a>
+          <a href="https://labs.badreddineek.com/" target="_blank" rel="noopener" class="btn btn-ghost">Labs</a>
         </div>
       </div>
       <div class="about-stats">
         <div class="stat-box"><div class="num">3</div><div class="label">Dipl&ocirc;mes</div></div>
         <div class="stat-box"><div class="num">2</div><div class="label">Stages 6 mois</div></div>
         <div class="stat-box"><div class="num">3h43</div><div class="label">Marathon</div></div>
-        <div class="stat-box"><div class="num">10+</div><div class="label">Apps &amp; projets</div></div>
+        <div class="stat-box"><div class="num">10+</div><div class="label">Apps et projets</div></div>
       </div>
     </div>
   </div>
@@ -394,26 +403,26 @@
 <section id="skills">
   <div class="container">
     <p class="section-label">// stack technique</p>
-    <h2 class="section-title">Technologies &amp; Outils</h2>
+    <h2 class="section-title">Technologies et outils</h2>
     <div class="skills-grid">
-      <div class="skill-chip"><span class="icon">&#128013;</span>Python</div>
-      <div class="skill-chip"><span class="icon">&#127880;</span>Streamlit</div>
-      <div class="skill-chip"><span class="icon">&#10052;&#65039;</span>Snowflake</div>
-      <div class="skill-chip"><span class="icon">&#128452;&#65039;</span>SQL</div>
-      <div class="skill-chip"><span class="icon">&#129504;</span>Machine Learning</div>
-      <div class="skill-chip"><span class="icon">&#129302;</span>LLM / RAG</div>
-      <div class="skill-chip"><span class="icon">&#128279;</span>LangChain</div>
-      <div class="skill-chip"><span class="icon">&#128202;</span>Data Viz</div>
-      <div class="skill-chip"><span class="icon">&#9883;&#65039;</span>React / Next.js</div>
-      <div class="skill-chip"><span class="icon">&#128220;</span>TypeScript</div>
-      <div class="skill-chip"><span class="icon">&#128011;</span>Docker</div>
-      <div class="skill-chip"><span class="icon">&#9729;&#65039;</span>Vercel</div>
-      <div class="skill-chip"><span class="icon">&#128211;</span>Jupyter</div>
-      <div class="skill-chip"><span class="icon">&#128200;</span>R / Stats</div>
-      <div class="skill-chip"><span class="icon">&#128295;</span>GitHub</div>
-      <div class="skill-chip"><span class="icon">&#128203;</span>Excel / BI</div>
-      <div class="skill-chip"><span class="icon">&#128154;</span>DuckDB</div>
-      <div class="skill-chip"><span class="icon">&#9889;</span>Databricks</div>
+      <div class="skill-chip">Python</div>
+      <div class="skill-chip">Streamlit</div>
+      <div class="skill-chip">Snowflake</div>
+      <div class="skill-chip">SQL</div>
+      <div class="skill-chip">Machine Learning</div>
+      <div class="skill-chip">LLM / RAG</div>
+      <div class="skill-chip">LangChain</div>
+      <div class="skill-chip">Data Viz</div>
+      <div class="skill-chip">React / Next.js</div>
+      <div class="skill-chip">TypeScript</div>
+      <div class="skill-chip">Docker</div>
+      <div class="skill-chip">Vercel</div>
+      <div class="skill-chip">Jupyter</div>
+      <div class="skill-chip">R / Stats</div>
+      <div class="skill-chip">GitHub</div>
+      <div class="skill-chip">Excel / BI</div>
+      <div class="skill-chip">DuckDB</div>
+      <div class="skill-chip">Databricks</div>
     </div>
   </div>
 </section>
@@ -421,20 +430,21 @@
 <section id="contact">
   <div class="container">
     <div class="contact-card">
-      <h2>Travaillons ensemble &#129309;</h2>
-      <p>Toujours ouvert &agrave; des collaborations, missions freelance ou &eacute;changes autour de la data et du code.</p>
+      <h2>Travaillons ensemble</h2>
+      <p>Ouvert aux collaborations, missions freelance et &eacute;changes autour de la data et du code.</p>
       <div class="social-links">
-        <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="social-link">&#128025; GitHub</a>
-        <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="social-link">&#128188; LinkedIn</a>
-        <a href="https://share.streamlit.io/user/badreddineek" target="_blank" rel="noopener" class="social-link">&#127880; Streamlit Cloud</a>             <a href="https://labs.badreddineek.com/" target="_blank" rel="noopener" class="social-btn">&#127981; Labs</a>
-        <a href="mailto:elkhamlichi.badreddine@gmail.com" class="social-link">&#128231; Email</a>
+        <a href="https://github.com/BadreddineEK" target="_blank" rel="noopener" class="social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://share.streamlit.io/user/badreddineek" target="_blank" rel="noopener" class="social-link">Streamlit Cloud</a>
+        <a href="https://labs.badreddineek.com/" target="_blank" rel="noopener" class="social-link">Labs</a>
+        <a href="mailto:elkhamlichi.badreddine@gmail.com" class="social-link">Email</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  &copy; 2026 Badreddine EL KHAMLICHI &mdash; Construit avec &hearts; et beaucoup de Python
+  &copy; 2026 Badreddine EL KHAMLICHI &middot; Lyon, France
 </footer>
 
 <script src="script.js"></script>
