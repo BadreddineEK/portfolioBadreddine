@@ -223,4 +223,5 @@ footer{background:var(--bg);border-top:1px solid var(--div);padding:var(--sp8) v
 /* ============ PROJETS — COLLAPSE ============ */
 .projects-more[hidden]{display:none}
 .proj-cat{font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);margin:var(--sp12) 0 var(--sp5)}
-.center-btn{display:flex;justify-content:center;margin-top:var(--sp10)}
+.center-btn{display:flex;justify-content:center;margin-top:var(--sp12)}
+.approach-note{font-size:var(--text-sm);color:var(--txm);font-style:italic;margin-top:var(--sp3)}
