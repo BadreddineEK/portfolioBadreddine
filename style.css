@@ -199,3 +199,28 @@ footer{background:var(--bg);border-top:1px solid var(--div);padding:var(--sp8) v
   .projects-grid{grid-template-columns:1fr}
   .about-stats{min-width:0}
 }
+
+/* ============ PRODUITS ============ */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:var(--sp5)}
+.product-card{display:flex;flex-direction:column;gap:var(--sp3);background:var(--sf);border:1px solid var(--bd);border-radius:var(--r-xl);padding:var(--sp8);padding-left:calc(var(--sp8) + 4px);position:relative;overflow:hidden;color:inherit;transition:transform var(--tr),border-color var(--tr),box-shadow var(--tr)}
+.product-card::before{content:"";position:absolute;top:0;bottom:0;left:0;width:4px;background:var(--ac)}
+.product-card:hover{transform:translateY(-2px);border-color:oklch(from var(--ac) l c h/.3);box-shadow:var(--shh)}
+.product-card.product-soon{cursor:default}
+.product-card.product-soon::before{background:var(--txf)}
+.product-card.product-soon:hover{transform:none;box-shadow:none;border-color:var(--bd)}
+.product-top{display:flex;align-items:center;justify-content:space-between}
+.product-icon{width:44px;height:44px;border-radius:var(--r-lg);background:var(--ach);color:var(--ac);display:flex;align-items:center;justify-content:center}
+.product-card.product-soon .product-icon{color:var(--txm);background:var(--sfd)}
+.product-card h3{font-family:var(--fd);font-size:var(--text-lg);font-weight:900;letter-spacing:-.02em;color:var(--tx);margin-top:var(--sp2)}
+.product-card p{font-size:var(--text-sm);color:var(--txm);line-height:1.6}
+.product-badge{font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;padding:.2rem .7rem;border-radius:var(--r-full);white-space:nowrap}
+.product-badge.live{color:var(--gr);background:var(--grh);border:1px solid oklch(from var(--gr) l c h/.25)}
+.product-badge.soon{color:var(--txm);background:var(--sfd);border:1px solid var(--bd)}
+.product-foot{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp2);margin-top:auto;padding-top:var(--sp4)}
+.product-cta{margin-left:auto;font-size:var(--text-xs);font-weight:700;color:var(--ac)}
+.product-card.product-soon .product-cta{color:var(--txm)}
+
+/* ============ PROJETS — COLLAPSE ============ */
+.projects-more[hidden]{display:none}
+.proj-cat{font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);margin:var(--sp12) 0 var(--sp5)}
+.center-btn{display:flex;justify-content:center;margin-top:var(--sp10)}

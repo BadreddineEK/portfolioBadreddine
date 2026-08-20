@@ -68,3 +68,25 @@
     icon(mode);
   });
 })();
+
+/* --- Voir plus / moins : projets --- */
+(function () {
+  var btn = document.getElementById('projects-toggle');
+  var more = document.getElementById('projects-more');
+  if (!btn || !more) return;
+  var span = btn.querySelector('span');
+  btn.addEventListener('click', function () {
+    var willOpen = more.hasAttribute('hidden');
+    if (willOpen) { more.removeAttribute('hidden'); }
+    else { more.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    if (span) {
+      var fr = willOpen ? 'Voir moins' : 'Voir tous les projets';
+      var en = willOpen ? 'Show less' : 'See all projects';
+      span.setAttribute('data-fr', fr);
+      span.setAttribute('data-en', en);
+      var lang = document.documentElement.getAttribute('data-lang') || 'fr';
+      span.textContent = lang === 'fr' ? fr : en;
+    }
+  });
+})();
